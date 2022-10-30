@@ -1,18 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="7"
+    android:background="#1a1411">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border_square">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/equation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="111"
+            android:textSize="64sp"
+            android:textColor="@color/white"
+            android:gravity="right|bottom"
+            android:layout_weight="2"/>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="111"
+            android:textColor="@color/white"
+            android:textSize="48sp"
+            android:gravity="right|bottom"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/all_clear"
+            style="@style/actionButton"
+            android:text="@string/ac"
+            android:backgroundTint="#4b4614"/>
+        <!-- Почему атрибут background перекрывает атрибут из файла themes,
+                а атрибут backgroundTint нет?-->
+
+        <TextView
+            android:id="@+id/brackets"
+            style="@style/actionButton"
+            android:text="( )"
+            />
+
+        <TextView
+            android:id="@+id/percent"
+            style="@style/actionButton"
+            android:text="%"
+            />
+
+        <TextView
+            android:id="@+id/div"
+            style="@style/actionButton"
+            android:text="÷"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/seven"
+            style="@style/numberButton"
+            android:text="7"
+            />
+
+        <TextView
+            android:id="@+id/eight"
+            style="@style/numberButton"
+            android:text="8"
+            />
+
+        <TextView
+            android:id="@+id/nine"
+            style="@style/numberButton"
+            android:text="9"
+            />
+
+        <TextView
+            android:id="@+id/multiply"
+            style="@style/actionButton"
+            android:text="×"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/four"
+            style="@style/numberButton"
+            android:text="4"
+            />
+
+        <TextView
+            android:id="@+id/five"
+            style="@style/numberButton"
+            android:text="5"
+            />
+
+        <TextView
+            android:id="@+id/six"
+            style="@style/numberButton"
+            android:text="6"
+            />
+
+        <TextView
+            android:id="@+id/minus"
+            style="@style/actionButton"
+            android:text="—"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/one"
+            style="@style/numberButton"
+            android:text="1"
+            />
+
+        <TextView
+            android:id="@+id/two"
+            style="@style/numberButton"
+            android:text="2"
+            />
+
+        <TextView
+            android:id="@+id/three"
+            style="@style/numberButton"
+            android:text="3"
+            />
+
+        <TextView
+            android:id="@+id/plus"
+            style="@style/actionButton"
+            android:text="+"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/zero"
+            style="@style/numberButton"
+            android:text="0"
+            />
+
+        <TextView
+            android:id="@+id/dot"
+            style="@style/numberButton"
+            android:text="'"
+            android:gravity="bottom|center"
+            />
+
+        <TextView
+            android:id="@+id/delete"
+            style="@style/numberButton"
+            android:text="⌫"
+            />
+
+        <TextView
+            android:id="@+id/equal"
+            style="@style/actionButton"
+            android:text="="
+            android:backgroundTint="#6f340e"/>
+    </LinearLayout>
+
+
+</LinearLayout>
